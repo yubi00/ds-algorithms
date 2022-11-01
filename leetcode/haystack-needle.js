@@ -4,7 +4,8 @@
 //  * @return {number}
 //  */
 //Naive string searching algorithm using two pointers approach with a
-// Time complexity of O(n) in best case when there is no first matching letter and O(m* (n-m+1)) in worst case and a constant space
+// Time complexity of O(n) in best case when there is no first matching letter and O(nm) or O(m* (n-m+1)) in worst case and a constant space
+// where n is the length of the haystack and m is the length of the needle
 let strStr = function (haystack, needle) {
   //handling edge cases
   const haystack_length = haystack.length;

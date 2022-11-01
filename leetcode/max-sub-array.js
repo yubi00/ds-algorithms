@@ -41,8 +41,8 @@ function dpMaxSubArr(nums) {
   for (let i = 1; i < nums.length; i++) {
     dp[i] = Math.max(nums[i], dp[i - 1] + nums[i]);
   }
-  return dp[nums.length - 1];
+  return Math.max(...dp);
 }
 
-const res = dpMaxSubArr([1, 3, -2, 3, 1, -4, -3, 5, 8]);
+const res = dpMaxSubArr([1, 3, -2, 3, 1, 8, -4, -3, 5]);
 console.log(res);

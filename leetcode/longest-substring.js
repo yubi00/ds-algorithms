@@ -7,6 +7,8 @@ function longestSubstring(s) {
   let ans = "";
 
   while (end < s.length && start < s.length) {
+    console.log(start)
+    console.log(end)
     if (!store[s[end]]) {
       store[s[end]] = 1;
       let size = end - start + 1;
@@ -19,13 +21,17 @@ function longestSubstring(s) {
       store[s[start]]--;
       start++;
     }
+    console.log(store)
   }
   console.log(store);
   console.log(ans);
   return max;
 }
 
-const res = longestSubstring("pwwkery");
+const res = longestSubstring("abcabcbb");
 console.log(res);
+
+const s = { a: 0 }
+console.log(s['a'])
 
 //longest substring without repeating characters
